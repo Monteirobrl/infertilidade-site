@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Infertilidade</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@404;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,57 +15,49 @@
     </header>
 
     <main class="container">
-        <section class="card intro-section">
-            <h2 class="card-title">Sobre a Infertilidade Conjugal</h2>
+        <section class="card reveal intro-section">
+            <h2 class="card-title">Prefácio</h2>
             <p class="card-text">
-                Nesta apresentação, aprofundamos no complexo universo da infertilidade, abordando suas definições, causas e impactos tanto na saúde reprodutiva masculina quanto feminina. Exploramos detalhadamente as possíveis origens da infertilidade, identificando onde as falhas ou condições podem ocorrer nos sistemas reprodutivos de ambos os parceiros.
+                Nesta apresentação, aprofundamos no complexo universo da infertilidade, abordando suas definições, causas e impactos tanto na saúde reprodutiva masculina quanto feminina.
             </p>
             <p class="card-text">
-                Discutimos também o conceito de infertilidade conjugal, onde a dificuldade de concepção pode envolver fatores de ambos os lados. Através de exemplos e dinâmicas, esclarecemos a importante distinção entre infertilidade e esterilidade, desmistificando termos e conceitos cruciais para a compreensão do tema. Nosso objetivo é oferecer informação precisa e acolhedora, promovendo a conscientização e o suporte.
+                Exploramos detalhadamente as possíveis origens da infertilidade, identificando onde as falhas ou condições podem ocorrer nos sistemas reprodutivos de ambos os parceiros.
             </p>
         </section>
 
-        <section class="card feedback-section">
+        <section class="card reveal feedback-section">
             <h2 class="card-title">Sua Avaliação Ajuda!</h2>
             <p class="card-text">
-                Sua perspetiva é muito valiosa para nós. Por favor, dedique um momento para preencher nosso formulário de avaliação sobre a apresentação. Seus comentários contribuem significativamente para aprimorarmos nosso conteúdo e abordagem.
+                Sua perspetiva é muito valiosa para nós. Por favor, dedique um momento para preencher nosso formulário de avaliação.
             </p>
-            <a href="URL_DO_SEU_FORMS_GOOGLE" target="_blank" class="btn primary-btn">
-                <i class="fas fa-clipboard-list icon-left"></i> Avaliar Apresentação
+            <a href="https://forms.gle/BJZn2wgdMTFvbP1H7" target="_blank" class="btn primary-btn">
+                <i class="fas fa-clipboard-list"></i>
+                <span>Avaliar Apresentação</span>
             </a>
         </section>
 
-        <section class="card download-section">
+        <section class="card reveal download-section">
             <h2 class="card-title">Material Complementar</h2>
             <p class="card-text">
-                Para revisar os detalhes e aprofundar seus conhecimentos, baixe a versão completa da apresentação em slides (PDF). Um recurso essencial para seu estudo.
+                Para revisar os detalhes e aprofundar seus conhecimentos, baixe a versão completa da apresentação em slides (PDF).
             </p>
-            <a href="URL_DO_SEU_PDF_DA_APRESENTACAO" download class="btn secondary-btn">
-                <i class="fas fa-download icon-left"></i> Baixar Slides (PDF)
+            <a href="https://www.canva.com/design/DAHDoRxjZTI/IMX6BU07d_YuTMZJlWgpFQ/edit?utm_content=DAHDoRxjZTI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" download class="btn secondary-btn">
+                <i class="fas fa-download"></i>
+                <span>Baixar Slides (PDF)</span>
             </a>
         </section>
 
-        <section class="card credits-section">
+        <section class="card reveal credits-section">
             <h2 class="card-title">Contexto Escolar</h2>
-
-            <p class="card-text">
-                Trabalho realizado no âmbito da disciplina de Saúde.
-            </p>
-
-            <p class="card-text">
-                <strong>Docente:</strong> Regina Gonçalves
-            </p>
-
-            <p class="card-text">
-                <strong>Discente:</strong> Gabriel Monteiro Dias
-            </p>
+            <p class="card-text">Trabalho realizado no âmbito da disciplina de Saúde.</p>
+            <p class="card-text"><strong>Docente:</strong> Regina Gonçalves</p>
+            <p class="card-text"><strong>Discente:</strong> Gabriel Monteiro Dias</p>
 
             <div class="logos-container">
                 <img src="https://i.imgur.com/BFhbFGQ.png" alt="Logo da Escola">
                 <img src="https://i.imgur.com/lb5Ujx2.png" alt="Logo do Curso">
             </div>
         </section>
-
     </main>
 
     <footer class="footer">
@@ -74,5 +66,22 @@
             <p>Curso Profissional</p>
         </div>
     </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100; // Quanto do elemento deve aparecer para disparar
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.addEventListener("load", reveal); // Garante que o topo carregue visível
+    </script>
 </body>
 </html>
